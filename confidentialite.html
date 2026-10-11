@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Politique de confidentialité · EVOMENTE</title>
+<meta name="description" content="EVOMENTE crée des storybooks digitaux qui réunissent les lettres, photos et messages vocaux de vos proches, à offrir pour un anniversaire, un mariage ou un départ.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A5%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>
+// ==== RÉGLAGES DU SITE EVOMENTE ====
+// Modifie uniquement les valeurs entre guillemets, puis enregistre.
+window.EVOMENTE = {
+  // Lien de ton Google Form de demande de devis (ex : https://forms.gle/xxxx)
+  devis: "",
+  // Ton adresse e-mail de contact
+  email: "evomente777@gmail.com"
+};
+
+// --- Ne pas modifier en dessous ---
+document.addEventListener("DOMContentLoaded", function () {
+  var c = window.EVOMENTE;
+  var cible = c.devis || ("mailto:" + c.email + "?subject=Demande%20de%20devis%20EVOMENTE");
+  document.querySelectorAll("[data-devis]").forEach(function (a) {
+    var f = a.getAttribute("data-devis");
+    a.href = (c.devis || !f) ? cible : cible + "%20-%20" + encodeURIComponent(f);
+    if (c.devis) { a.target = "_blank"; a.rel = "noopener"; }
+  });
+  document.querySelectorAll("[data-email]").forEach(function (a) {
+    a.href = "mailto:" + c.email; a.textContent = c.email;
+  });
+});
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">EVOMENTE</a>
+  <nav>
+    <a href="index.html#fonctionnement" class="hide-sm">Comment ça marche</a>
+    <a href="index.html#formules">Formules</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</div></header>
+<main class="legal"><h1>Politique de confidentialité</h1>
+<h2 id="1-qui-est-responsable-de-vos-données">1. Qui est responsable de
+vos données</h2>
+<p>Le responsable du traitement est <strong>EVOMENTE</strong>, [À
+COMPLÉTER : prénom, nom], entrepreneur individuel, SIRET <mark>[À COMPLÉTER]</mark>,
+<mark>[À COMPLÉTER : adresse]</mark>.</p>
+<p>Contact pour toute question sur vos données : <a
+href="mailto:evomente777@gmail.com">evomente777@gmail.com</a>.</p>
+<h2 id="2-données-collectées-finalités-et-bases-légales">2. Données
+collectées, finalités et bases légales</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Qui</th>
+<th>Données</th>
+<th>Pourquoi</th>
+<th>Base légale</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Client (demande de devis)</td>
+<td>Nom, prénom, e-mail, téléphone, formule souhaitée, informations sur
+le projet</td>
+<td>Répondre à la demande et établir le devis</td>
+<td>Mesures précontractuelles (art. 6.1.b RGPD)</td>
+</tr>
+<tr class="even">
+<td>Client (commande)</td>
+<td>Identité, e-mail, historique de commande, factures</td>
+<td>Réaliser la prestation, facturer</td>
+<td>Exécution du contrat (6.1.b) et obligation légale comptable
+(6.1.c)</td>
+</tr>
+<tr class="odd">
+<td>Client (paiement)</td>
+<td>Données de paiement, traitées uniquement par Stripe</td>
+<td>Encaisser le paiement de la commande</td>
+<td>Exécution du contrat (6.1.b)</td>
+</tr>
+<tr class="even">
+<td>Proches (envoi de fichiers)</td>
+<td>Nom ou prénom, adresse e-mail du compte Google utilisé pour l'envoi,
+textes, photos, audios, vidéos</td>
+<td>Réaliser le storybook commandé par le Client</td>
+<td>Exécution du contrat passé avec le Client (6.1.b) et intérêt
+légitime (6.1.f)</td>
+</tr>
+</tbody>
+</table>
+<p>EVOMENTE ne demande aucune donnée sensible (santé, religion,
+opinions…). Si un contenu envoyé en révèle, il est utilisé uniquement
+pour le storybook et supprimé dans les mêmes délais.</p>
+<p>Les personnes figurant sur les photos sont informées par la personne
+qui les envoie, qui confirme avoir leur accord. Pour un mineur, l'accord
+est donné par un titulaire de l'autorité parentale.</p>
+<p>Aucune donnée n'est vendue ni utilisée pour de la publicité.</p>
+<h2 id="3-qui-a-accès-à-vos-données">3. Qui a accès à vos données</h2>
+<p>Seul EVOMENTE a accès aux données et aux contenus. EVOMENTE fait
+appel aux prestataires techniques suivants, qui agissent comme
+sous-traitants :</p>
+<table>
+<thead>
+<tr class="header">
+<th>Prestataire</th>
+<th>Rôle</th>
+<th>Localisation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Google (Forms, Drive, Gmail)</td>
+<td>Formulaires, stockage des fichiers, e-mails</td>
+<td>UE et États-Unis</td>
+</tr>
+<tr class="even">
+<td>Stripe</td>
+<td>Paiement en ligne</td>
+<td>UE et États-Unis</td>
+</tr>
+<tr class="odd">
+<td>GitHub Pages</td>
+<td>Hébergement de ce site (aucune donnée client stockée)</td>
+<td>États-Unis</td>
+</tr>
+<tr class="even">
+<td><mark>[À COMPLÉTER : logiciel de facturation]</mark></td>
+<td>Factures</td>
+<td><mark>[À COMPLÉTER]</mark></td>
+</tr>
+</tbody>
+</table>
+<p>Les transferts vers les États-Unis sont encadrés par le cadre de
+protection des données UE–États-Unis (Data Privacy Framework) ou par les
+clauses contractuelles types de la Commission européenne.</p>
+<h2 id="4-durées-de-conservation">4. Durées de conservation</h2>
+<table>
+<thead>
+<tr class="header">
+<th>Données</th>
+<th>Durée</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Demande de devis sans suite</td>
+<td><mark>[À COMPLÉTER : 3 ans]</mark> après le dernier contact</td>
+</tr>
+<tr class="even">
+<td>Photos, textes, audios, vidéos des Proches</td>
+<td><mark>[À COMPLÉTER : 3 mois]</mark> après la livraison du storybook, puis
+suppression</td>
+</tr>
+<tr class="odd">
+<td>Storybook livré</td>
+<td><mark>[À COMPLÉTER : 3 mois]</mark> après livraison, sauf demande du Client de le
+conserver plus longtemps</td>
+</tr>
+<tr class="even">
+<td>Factures et données comptables</td>
+<td>10 ans (obligation légale)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-sécurité">5. Sécurité</h2>
+<p>EVOMENTE protège les données par : double authentification sur tous
+les comptes, dossiers de stockage privés et séparés par projet, absence
+de partage des fichiers avec des tiers, suppression à l'issue des durées
+ci-dessus. EVOMENTE n'a jamais accès aux numéros de carte bancaire.</p>
+<p>En cas de violation de données présentant un risque, EVOMENTE en
+informe la CNIL sous 72 heures et, si nécessaire, les personnes
+concernées.</p>
+<h2 id="6-cookies">6. Cookies</h2>
+<p>Ce site n'utilise aucun cookie, aucun outil de mesure d'audience et
+ne charge aucune ressource externe.</p>
+<h2 id="7-vos-droits">7. Vos droits</h2>
+<p>Vous disposez des droits d'accès, de rectification, d'effacement, de
+limitation, d'opposition et de portabilité de vos données. Vous pouvez
+aussi donner des directives sur le sort de vos données après votre
+décès.</p>
+<p>Pour les exercer, écrivez à <a
+href="mailto:evomente777@gmail.com">evomente777@gmail.com</a>. EVOMENTE
+répond sous un mois maximum.</p>
+<p>Si vous estimez que vos droits ne sont pas respectés, vous pouvez
+adresser une réclamation à la CNIL : <a
+href="https://www.cnil.fr/fr/plaintes">cnil.fr/plaintes</a>.</p>
+<p>Dernière mise à jour : <mark>[À COMPLÉTER : date]</mark>.</p>
+</main>
+<footer><div class="wrap">
+  <span>© 2026 EVOMENTE · <a data-email href="#">contact</a></span>
+  <nav>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="cgv.html">CGV</a>
+    <a href="confidentialite.html">Confidentialité</a>
+  </nav>
+</div></footer>
+</body>
+</html>

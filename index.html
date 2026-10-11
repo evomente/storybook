@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EVOMENTE · Storybooks à offrir</title>
+<meta name="description" content="EVOMENTE crée des storybooks digitaux qui réunissent les lettres, photos et messages vocaux de vos proches, à offrir pour un anniversaire, un mariage ou un départ.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A5%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>
+// ==== RÉGLAGES DU SITE EVOMENTE ====
+// Modifie uniquement les valeurs entre guillemets, puis enregistre.
+window.EVOMENTE = {
+  // Lien de ton Google Form de demande de devis (ex : https://forms.gle/xxxx)
+  devis: "",
+  // Ton adresse e-mail de contact
+  email: "evomente777@gmail.com"
+};
+
+// --- Ne pas modifier en dessous ---
+document.addEventListener("DOMContentLoaded", function () {
+  var c = window.EVOMENTE;
+  var cible = c.devis || ("mailto:" + c.email + "?subject=Demande%20de%20devis%20EVOMENTE");
+  document.querySelectorAll("[data-devis]").forEach(function (a) {
+    var f = a.getAttribute("data-devis");
+    a.href = (c.devis || !f) ? cible : cible + "%20-%20" + encodeURIComponent(f);
+    if (c.devis) { a.target = "_blank"; a.rel = "noopener"; }
+  });
+  document.querySelectorAll("[data-email]").forEach(function (a) {
+    a.href = "mailto:" + c.email; a.textContent = c.email;
+  });
+});
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">EVOMENTE</a>
+  <nav>
+    <a href="index.html#fonctionnement" class="hide-sm">Comment ça marche</a>
+    <a href="index.html#formules">Formules</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</div></header>
+<main>
+<section class="hero"><div class="wrap">
+  <div class="banner"><img src="banniere.jpg" width="1600" height="397" alt="Illustration EVOMENTE : les grands moments d'une vie reliés par une pellicule de film"></div>
+  <h1>Les mots de ceux qui vous aiment,<br>réunis dans un storybook</h1>
+  <p class="lead">EVOMENTE rassemble les lettres, photos et messages vocaux de vos proches dans un storybook digital, à offrir pour un anniversaire, un mariage, un départ ou simplement pour dire « je t'aime ».</p>
+  <a class="btn" data-devis="" href="#formules">Demander mon devis gratuit</a>
+</div></section>
+
+<section class="section" id="fonctionnement"><div class="wrap">
+  <h2>Comment ça marche</h2>
+  <p class="sub">Vous vous occupez de l'émotion, on s'occupe du reste.</p>
+  <ol class="steps">
+    <li><h3>Votre demande</h3><p>Vous remplissez le formulaire de devis : pour qui, quelle occasion, combien de proches.</p></li>
+    <li><h3>Paiement sécurisé</h3><p>Vous recevez votre devis et un lien de paiement par carte, Apple Pay ou Google Pay.</p></li>
+    <li><h3>Les proches participent</h3><p>Vous partagez notre lien : chacun envoie sa lettre, ses photos et son message vocal.</p></li>
+    <li><h3>La surprise</h3><p>Nous créons le storybook et vous le livrons, prêt à être offert.</p></li>
+  </ol>
+</div></section>
+
+<section class="section" id="formules"><div class="wrap">
+  <h2>Nos formules</h2>
+  <p class="sub">Un prix unique, payé à la commande. Le prix dépend du nombre de proches qui participent et du délai de livraison.</p>
+  <div class="plans">
+    <div class="plan">
+      <h3>Essentiellement toi</h3>
+      <div class="price">39 € <small>TTC</small></div>
+      <ul>
+        <li>Jusqu'à <mark>X</mark> proches</li>
+        <li>Lettres, photos et messages vocaux</li>
+        <li>Livraison sous <mark>X</mark> jours</li>
+      </ul>
+      <a class="btn ghost" data-devis="Essentiellement toi" href="#">Choisir cette formule</a>
+    </div>
+    <div class="plan star">
+      <h3>Ton histoire</h3>
+      <div class="price">59 € <small>TTC</small></div>
+      <ul>
+        <li>Jusqu'à <mark>X</mark> proches</li>
+        <li>Lettres, photos et messages vocaux</li>
+        <li>Livraison sous <mark>X</mark> jours</li>
+      </ul>
+      <a class="btn" data-devis="Ton histoire" href="#">Choisir cette formule</a>
+    </div>
+    <div class="plan">
+      <h3>À jamais</h3>
+      <div class="price">79 € <small>TTC</small></div>
+      <ul>
+        <li>Jusqu'à <mark>X</mark> proches</li>
+        <li>Lettres, photos et messages vocaux</li>
+        <li>Livraison sous <mark>X</mark> jours</li>
+      </ul>
+      <a class="btn ghost" data-devis="À jamais" href="#">Choisir cette formule</a>
+    </div>
+  </div>
+  <p class="note">TVA non applicable, art. 293 B du CGI. Création personnalisée : pas de droit de rétractation (<a href="cgv.html">voir nos CGV</a>).</p>
+</div></section>
+
+<section class="section"><div class="wrap">
+  <h2>Vos souvenirs sont entre de bonnes mains</h2>
+  <p class="sub">Les photos et messages de vos proches sont précieux. Nous les traitons comme tels.</p>
+  <div class="trust">
+    <div><h3>Paiement sécurisé</h3><p>Le paiement passe par Stripe. Nous n'avons jamais accès à votre numéro de carte.</p></div>
+    <div><h3>Fichiers privés</h3><p>Chaque projet a son propre dossier privé, visible uniquement par EVOMENTE.</p></div>
+    <div><h3>Supprimés après livraison</h3><p>Photos et messages sont effacés 3 mois après la livraison. <a href="confidentialite.html">En savoir plus</a></p></div>
+  </div>
+</div></section>
+
+<section class="section cta" id="contact"><div class="wrap">
+  <h2>Une question ?</h2>
+  <p class="sub">Écrivez-nous, nous répondons rapidement.</p>
+  <p><a class="btn ghost" data-email href="#">Nous écrire</a></p>
+</div></section>
+</main>
+<footer><div class="wrap">
+  <span>© 2026 EVOMENTE · <a data-email href="#">contact</a></span>
+  <nav>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="cgv.html">CGV</a>
+    <a href="confidentialite.html">Confidentialité</a>
+  </nav>
+</div></footer>
+</body>
+</html>

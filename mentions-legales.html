@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mentions légales · EVOMENTE</title>
+<meta name="description" content="EVOMENTE crée des storybooks digitaux qui réunissent les lettres, photos et messages vocaux de vos proches, à offrir pour un anniversaire, un mariage ou un départ.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%E2%99%A5%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="style.css">
+<script>
+// ==== RÉGLAGES DU SITE EVOMENTE ====
+// Modifie uniquement les valeurs entre guillemets, puis enregistre.
+window.EVOMENTE = {
+  // Lien de ton Google Form de demande de devis (ex : https://forms.gle/xxxx)
+  devis: "",
+  // Ton adresse e-mail de contact
+  email: "evomente777@gmail.com"
+};
+
+// --- Ne pas modifier en dessous ---
+document.addEventListener("DOMContentLoaded", function () {
+  var c = window.EVOMENTE;
+  var cible = c.devis || ("mailto:" + c.email + "?subject=Demande%20de%20devis%20EVOMENTE");
+  document.querySelectorAll("[data-devis]").forEach(function (a) {
+    var f = a.getAttribute("data-devis");
+    a.href = (c.devis || !f) ? cible : cible + "%20-%20" + encodeURIComponent(f);
+    if (c.devis) { a.target = "_blank"; a.rel = "noopener"; }
+  });
+  document.querySelectorAll("[data-email]").forEach(function (a) {
+    a.href = "mailto:" + c.email; a.textContent = c.email;
+  });
+});
+</script>
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html">EVOMENTE</a>
+  <nav>
+    <a href="index.html#fonctionnement" class="hide-sm">Comment ça marche</a>
+    <a href="index.html#formules">Formules</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</div></header>
+<main class="legal"><h1>Mentions légales</h1>
+<h2 id="éditeur-du-site">Éditeur du site</h2>
+<ul>
+<li><strong>Nom commercial</strong> : EVOMENTE</li>
+<li><strong>Exploitant</strong> : <mark>[À COMPLÉTER : prénom, nom]</mark>,
+entrepreneur individuel</li>
+<li><strong>Adresse</strong> : <mark>[À COMPLÉTER]</mark></li>
+<li><strong>SIRET</strong> : <mark>[À COMPLÉTER]</mark></li>
+<li><strong>E-mail</strong> : <a
+href="mailto:evomente777@gmail.com">evomente777@gmail.com</a></li>
+<li><strong>Directeur de la publication</strong> : <mark>[À COMPLÉTER :
+prénom, nom]</mark></li>
+</ul>
+<h2 id="hébergeur">Hébergeur</h2>
+<p>GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107,
+États-Unis. Site : <a href="https://github.com">github.com</a>.</p>
+<h2 id="propriété-intellectuelle">Propriété intellectuelle</h2>
+<p>Les textes, illustrations et le logo présents sur ce site
+appartiennent à EVOMENTE. Toute reproduction sans autorisation est
+interdite.</p>
+<h2 id="données-personnelles-et-cookies">Données personnelles et
+cookies</h2>
+<p>Ce site ne dépose aucun cookie et ne collecte aucune donnée. Les
+données transmises via les formulaires sont traitées selon notre <a
+href="confidentialite.html">politique de confidentialité</a>.</p>
+</main>
+<footer><div class="wrap">
+  <span>© 2026 EVOMENTE · <a data-email href="#">contact</a></span>
+  <nav>
+    <a href="mentions-legales.html">Mentions légales</a>
+    <a href="cgv.html">CGV</a>
+    <a href="confidentialite.html">Confidentialité</a>
+  </nav>
+</div></footer>
+</body>
+</html>
